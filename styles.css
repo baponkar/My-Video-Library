@@ -1,0 +1,137 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(58, 55, 55);
+}
+
+h2{
+    color: #f4f4f4;
+}
+
+p{
+    color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    max-width: 1200px;
+}
+
+.video-card-container {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+}
+
+.video-card {
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 20px;
+    transition: transform 0.3s;
+    box-shadow: 10px 4px 8px rgba(198, 39, 39, 0.1);
+    border-radius: 8px;
+    background-color: #020202;
+    margin: 8px;
+}
+
+.video-card video {
+    width: 100%;
+    height: auto;
+    max-height: 60vh; /* Adjust this value to control the max height of the video */
+    border-radius: 8px;
+    border: solid red 1px;
+    background-color: #555;
+    box-shadow: 0 4px 8px rgba(172, 152, 152, 0.2);
+}
+
+.video-card {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.video-card.active {
+    opacity: 1;
+    transform: translateX(0); /* Position the active card in the center */
+}
+
+.video-card.exit-left {
+    transform: translateX(-100%); /* Position the exiting card to the left */
+}
+
+.video-card.exit-right {
+    transform: translateX(100%); /* Position the exiting card to the right */
+}
+
+.nav-button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 50%;
+    user-select: none;
+    transition: background-color 0.3s;
+}
+
+.nav-button {
+    background-color: #555;
+}
+
+.nav-button {
+    outline: none;
+}
+
+/* Additional CSS for mobile devices */
+@media (max-width: 768px) {
+    body {
+        height: auto;
+        padding: 20px 0;
+        justify-content: flex-start;
+    }
+    
+    .container {
+        width: 90%;
+        flex-direction: column;
+        padding: 0 10px;
+    }
+
+    .video-card-container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .video-card {
+        padding: 15px;
+        margin: 10px 0;
+    }
+
+    .nav-button {
+        font-size: 20px;
+        padding: 8px;
+        margin: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .video-card {
+        padding: 10px;
+        margin: 5px 0;
+    }
+
+    .nav-button {
+        font-size: 18px;
+        padding: 6px;
+        margin: 5px;
+    }
+}
