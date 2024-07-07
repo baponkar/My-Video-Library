@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const nextBtn = document.getElementById('nextBtn');
     
     let currentIndex = getVideoIndexFromURL();
-    const totalCards = 242;
+    const totalCards = 243;
 
     function showCard(index) {
         updateURL(index);  // Pass the index to the updateURL function
